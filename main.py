@@ -23,7 +23,7 @@ def start_analyzing_mimic():
 
         for (x, y, w, h) in faces:
             cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
-        font = cv2.FONT_HERSHEY_SIMPLEX
+        font = cv2.FONT_HERSHEY_PLAIN
         print(result_analyzer['dominant_emotion'])
         # start to persist into database all emotions
 
@@ -35,5 +35,9 @@ def start_analyzing_mimic():
 
     cap.release()
     cv2.destroyAllWindows()
+
+def save_to_db():
+    print()
+
 if __name__ == '__main__':
     start_analyzing_mimic()
