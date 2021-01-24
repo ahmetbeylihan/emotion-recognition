@@ -52,7 +52,7 @@ def analyze_expressions(emotion):
 
 def report_expressions():
     total = 0;
-    print("Facial Expression Report")
+    print("##### Facial Expression Report #####")
     print(emotions)
     for key in emotions:
         total += emotions[key];
